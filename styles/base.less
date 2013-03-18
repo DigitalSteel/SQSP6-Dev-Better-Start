@@ -1,0 +1,111 @@
+
+/* MOBILE FIRST
+-------------------------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+	max-width: 960px;
+	padding: 20px 10px 20px 10px;
+	margin: auto;
+}
+#header {
+	margin-bottom: 20px;	
+}
+#mainNav {
+	margin: auto;
+	width: 100%;
+	min-height: 40px;
+}
+#content-full {
+	max-width: 920px;
+	padding: 0 20px;
+}
+
+#content {
+	max-width: 690px;
+}
+
+#sidebar-one {
+	width: 210px;
+	margin-left: 20px;
+}
+
+#footer { }
+
+.gallery img {
+	width: 100%;
+	
+}
+/* UTILITY
+-----------------------------------------------*/
+.disabled {
+	display: none;
+}
+
+/* HOMEPAGE
+-----------------------------------------------*/
+
+.homepage { }
+
+
+/* BLOG COLLECTION
+-----------------------------------------------*/
+
+.collection-type-blog {
+
+  /* BOTH PAGES 
+  ---------------------------------------------*/
+
+  /* LIST PAGE
+  ---------------------------------------------*/
+
+  &.view-list {
+	  #catg-tags a.category {
+		color: #eee;			  
+	  }
+	  
+	  #catg-tags a.tag {
+		color: #333;			  
+	  }
+  }
+
+  /* ITEM PAGE
+  ---------------------------------------------*/  
+
+  &.view-item {
+	   #catg-tags a.category {
+		color: #eee;			  
+	  }
+	  
+	  #catg-tags a.tag {
+		color: #333;			  
+	  }
+  }
+  
+}
+
+
+/* TOUCH DEVICE - ADDED BY MODERNIZR
+-----------------------------------------------*/
+
+html.touch {
+  .squarespace-comments .comments-content .comment-list .comment .comment-header .controls .squarespace-comment-buttons .comment-control {
+    opacity: 1;
+  }
+}
+
+
+/* BREAK GRID AND STACK BLOCKS ON SMALL SCREENS 
+-----------------------------------------------*/
+
+@media screen and (max-width: 980px) {
+
+  .row .col {
+    width: 100%;
+    float: none;
+  }
+  
+}

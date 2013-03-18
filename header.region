@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <!--INCLUDE SQS SCRIPTS, META TAGS AND USER CONTENT FROM THE CODE INJECTION TAB-->
+
+    {squarespace-headers}
+	
+	<squarespace:script src="jquery-1.9.1.min.js" />
+    <squarespace:script src="bootstrap.min.js" />
+    <squarespace:script src="site.js" combo="true" />
+
+  </head>
+
+  <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
+	  	<div id="wrapper">
+	    	
+	    	<!--HEADER-->
+			<header id="header">
+				<!--SITE TITLE OR LOGO-->
+				{.section website}
+				
+				<h1 data-content-field="site-title">
+				  <a href="/">
+				    {.section logoImageUrl}
+				     <img src="{logoImageUrl}?format=original" alt="{siteTitle}" />
+				    {.or}
+				      {siteTitle}
+				    {.end}
+				  </a>
+				</h1>
+				
+				<!--SITE TAGLINE-->
+				
+				{.section siteTagLine}<p>{@}</p>{.end}
+				
+				{.end}
+
+			  <!--MAIN NAVIGATION-->
+			
+			  <squarespace:navigation navigationId="mainNav" template="navigation" />
+						  
+			</header>
+			
+			<div class="content-main">
+				 
+				

@@ -1,0 +1,143 @@
+
+<!-- CATEGORY FILTER RESULTS ex: http://base-template.squarespace.com/blog/?category=category1 -->
+
+{.section categoryFilter}
+  <p>Filtering by Category: {@}</p>
+{.end}
+
+<!-- TAG FILTER RESULTS ex: http://base-template.squarespace.com/blog/?tag=tag2 -->
+
+{.section tagFilter}
+  <p>Filtering by Tag: {@}</p>
+{.end}
+
+<!-- AUTHOR FILTER RESULTS ex: http://www.base-template.com/blog?author=4f046df4d09ae2cf23d1aaa2 -->
+
+{.if authorFilter}
+  <p>Filtering by Author: {author.displayName}</p>
+{.end}
+
+<!--ITEM LOOP-->
+
+{.repeated section items}
+
+  <!--WRAPPER-->
+  
+  <article id="post-{id}" class="{@|item-classes}">
+    
+    <!--MAIN IMAGE-->
+
+    {.main-image?}  
+      <a href="{fullUrl}" class="main-image content-fill">
+        <img {@|image-meta} />
+      </a>
+    {.end}
+
+    <!--POST TILE-->
+
+    <h1 class="title">
+      {.passthrough?}
+        <a href="{sourceUrl}" target="_blank">{title}</a>
+      {.or}
+        <a href="{fullUrl}">{title}</a>
+      {.end}
+    </h1>
+
+    <!--EXCERPT OR BODY-->
+
+    {.if excerpt}
+      {excerpt}
+      <a class="link" href="{fullUrl}">Read More</a>
+    {.or}
+
+      <!--MAIN CONTENT-->
+
+      {body}
+      <p><small><a class="link muted" href="{fullUrl}">Permalink</a></small></p>
+
+    {.end}
+
+    <!--BLOG INJECTION-->
+
+    {postItemInjectCode}    
+
+    <!--CATEGORIES-->
+    <div id="catg-tags">
+		{.repeated section categories}
+			<span class="btn btn-info btn-mini">
+			<a class="category" href="?category={@|url-encode}">{@}</a>
+			</span>&nbsp;
+		{.alternates with}
+		
+		{.end}
+		
+		<!--TAGS-->
+		
+		{.repeated section tags}
+			<span class="btn btn-mini">
+			<a class="tag" href="?tag={@|url-encode}">{@}</a>
+			</span>&nbsp;
+		{.alternates with}
+		
+		{.end}
+    </div>
+    <!--SHARE AND LIKE-->
+
+    {@|like-button}
+    {@|social-button}
+
+    <!--POST META-->
+    
+    <p class="meta muted">
+    <small>
+      Published on <a href="{fullUrl}"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a> by <a href="?author={author.id}">{author.displayName}</a>.
+      {.section sourceUrl}
+        <a href="{@}" class="source" target="_blank">Source</a>.
+      {.end}
+    </small>  
+    </p>        
+
+    <!--LINK TO COMMENTS-->
+
+    {@|comment-link}
+
+    <!--LOCATION-->
+
+    {.section location}
+      {.section addressTitle}
+        {addressTitle}
+        {addressLine1}
+        {addressLine2}
+        {addressCountry}
+      {.end}
+    {.end}
+
+  </article>
+<hr />
+  {.or}
+    These are not the blog posts you are looking for.
+{.end}
+  
+<!--PAGINATION-->
+  
+{.if pagination}
+  <nav class="pagination">
+	  <ul>
+	    <!--NEWER PAGE-->
+	
+	    {.if pagination.prevPage}
+	      <li><a href="{pagination.prevPageUrl}">Newer</a></li>
+	    {.or}
+	      
+	    {.end}
+	
+	    <!--OLDER PAGE-->
+	
+	    {.if pagination.nextPage}
+	      <li><a href="{pagination.nextPageUrl}">Older</a></li>
+	    {.or}
+	      
+	    {.end}
+	  </ul>
+  </nav>
+{.end}

@@ -1,0 +1,104 @@
+
+{.section item}
+
+  <!--WRAPPER-->
+  
+  <article id="post-{id}" class="{@|item-classes}">
+    
+    <!--POST TILE-->
+
+    <h1 class="title">
+      {.passthrough?}
+        <a href="{sourceUrl}" target="_blank">{title}</a>
+      {.or}
+        <a href="{fullUrl}">{title}</a>
+      {.end}
+    </h1>
+
+    <!--MAIN CONTENT-->
+
+    {body}
+
+    <!--BLOG INJECTION-->
+
+    {postItemInjectCode}    
+
+    <!--CATEGORIES-->
+    <div id="catg-tags">
+		{.repeated section categories}
+			<span class="btn btn-info btn-mini">
+			<a class="category" href="?category={@|url-encode}">{@}</a>
+			</span>&nbsp;
+		{.alternates with}
+		
+		{.end}
+		
+		<!--TAGS-->
+		
+		{.repeated section tags}
+			<span class="btn btn-mini">
+			<a class="tag" href="?tag={@|url-encode}">{@}</a>
+			</span>&nbsp;
+		{.alternates with}
+		
+		{.end}
+    </div>
+    
+    <!--SHARE AND LIKE-->
+    {@|like-button}
+    {@|social-button}
+  
+    <!--AUTHOR AND DATE-->
+    
+    <p class="meta muted">
+    <small>
+      Published on <a href="{fullUrl}"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a> by <a href="?author={author.id}">{author.displayName}</a>.
+      {.section sourceUrl}
+        <a href="{@}" class="source" target="_blank">Source</a>.
+      {.end}
+    </small>  
+    </p>      
+
+    <!--LOCATION-->
+
+    {.section location}
+      {.section addressTitle}
+        {addressTitle}
+        {addressLine1}
+        {addressLine2}
+        {addressCountry}
+      {.end}
+    {.end}
+
+    <!--COMMENTS-->
+
+    {@|comments}
+
+  </article>
+
+{.end}
+    
+
+<!--PAGINATION-->
+  
+{.section pagination}
+  <nav class="pagination">
+	  <ul>
+	    <!--NEWER PAGE-->
+	
+	    {.section prevItem}
+	      <li><a href="{fullUrl}">Newer</a></li>
+	    {.or}
+	      
+	    {.end}
+	    
+	    <!--OLDER PAGE-->
+	
+	    {.section nextItem}
+	      <li><a href="{fullUrl}">Older</a></li>
+	    {.or}
+	    
+	    {.end}
+	  </ul>
+  </nav>
+{.end}

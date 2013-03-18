@@ -1,0 +1,13 @@
+<div class="gallery">
+	{.repeated section items}
+		
+		{.video?}
+			{@|video-meta}
+		{.end}
+		
+		{.image?}
+			<img {@|image-meta}="">
+		{.end}
+		
+	{.end}
+</div><!--End gallery -->
