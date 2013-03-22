@@ -2,7 +2,6 @@ This is a customized Bootstrap setup. The grid system and some of the components
 
 Uncheck the following features:
 
-
 1. Choose components
 
 	// Scaffolding
@@ -22,3 +21,8 @@ Uncheck the following features:
 		Narrow tablets and below (<767px)
 		Tablets to desktops (767-979px)
 		Large desktops (>1200px)
+		
+*To utilize the glyphicons, you must change the path to them in bootstrap-custom.css.
+
+LINE 785. background-image: url("assets/img/glyphicons-halflings.png");
+LINC 808. background-image: url("assets/img/glyphicons-halflings-white.png");
