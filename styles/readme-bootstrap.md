@@ -25,4 +25,4 @@ Uncheck the following features:
 *To utilize the glyphicons, you must change the path to them in bootstrap-custom.css.
 
 LINE 785. background-image: url("assets/img/glyphicons-halflings.png");
-LINC 808. background-image: url("assets/img/glyphicons-halflings-white.png");
+LINE 808. background-image: url("assets/img/glyphicons-halflings-white.png");
