@@ -1,3 +1,7 @@
-Insert some clever text here.\n
+SQS6-Dev-Better-Start
 
-This is a demo project to get a better working template start for the SquareSpace 6 developer platform. I'm using SFTP to publish to my SQS6 Dev Site and github to track changes and issues. We'll see how hard this can fail.
+This is a demo project to get a better working template start for the SquareSpace 6 developer platform using Twitter Bootstrap.
+
+This project is not intented to be a custom template. Very little design will be applied.
+
+The goal of the project is to give the user a choice of navigation and style (through template.conf) to match any of the current Bootstrap examples. 
