@@ -11,7 +11,8 @@
 
     {squarespace-headers}
 	
-	<squarespace:script src="jquery-1.9.1.min.js" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="scripts/jquery-1.9.1.min.js"><\/script>')</script>
     <squarespace:script src="bootstrap.min.js" />
     <squarespace:script src="site.js" combo="true" />
 
@@ -41,6 +42,7 @@
 				
 				{.end}
 
+
 			  <!--MAIN NAVIGATION-->
 			
 			  <squarespace:navigation navigationId="mainNav" template="navigation" />
@@ -48,5 +50,4 @@
 			</header>
 			
 			<div class="content-main">
-				 
-				
+			
