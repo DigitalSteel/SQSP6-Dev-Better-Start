@@ -19,15 +19,34 @@
   </head>
 
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
-  		
+	    <div class="container"><!-- FIRST CONTAINER -->	
 	    	<!--HEADER-->
 			<header id="header">
-				
+
+			<!--SITE TITLE OR LOGO-->
+
+		      {.section website}
+		
+		        <h1 data-content-field="site-title">
+		          <a href="/">
+		            {.section logoImageUrl}
+		             <img src="{logoImageUrl}?format=original" alt="{siteTitle}" />
+		            {.or}
+		              {siteTitle}
+		            {.end}
+		          </a>
+		        </h1>
+		        
+		        <!--SITE TAGLINE-->
+		
+		        {.section siteTagLine}<p>{@}</p>{.end}
+		
+		      {.end}
 			  <!--MAIN NAVIGATION-->
 			
-			  <squarespace:navigation navigationId="mainNav" template="navigation-1" />
+			  <squarespace:navigation navigationId="mainNav" template="navigation-3" />
 						  
 			</header>
 			
-			<div class="container">
+			<div class="container"><!-- 2ND CONTAINER -->
 			

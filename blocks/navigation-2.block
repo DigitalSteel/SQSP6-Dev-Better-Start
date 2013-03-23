@@ -1,0 +1,87 @@
+<nav id="mainNav" data-content-field="navigation-mainNav">
+	<div class="masthead">      
+			<ul class="nav nav-pills pull-right">
+			{.repeated section items}
+			
+			    <li class="{.section active} active{.end}{.if folderActive} active{.end}">
+			
+			      {.folder?}
+			
+			        <!--FOLDER-->
+			        <li class="{.section active} active{.end}{.if folderActive} active{.end} dropdown">
+			          <a class="dropdown-toggle" data-toggle="dropdown" href="{collection.fullUrl}">{collection.navigationTitle} <b class="caret"></b></a>
+			
+			          <ul class="dropdown-menu">
+			
+			            {.repeated section items}
+			
+			              <!--COLLECTION IN A FOLDER-->
+			
+			              {.collection?}
+			                <li class="{.section active} active{.end}">
+			                  <a href="{collection.fullUrl}">
+			                    {collection.navigationTitle}
+			                  </a>
+			                </li>
+			              {.end}
+			
+			              <!--EXTERNAL LINK IN A FOLDER-->
+			
+			              {.section externalLink}
+			                <li>
+			                  <a href="{url}"{.section newWindow} target="_blank"{.end}>
+			                    {title}
+			                  </a>
+			                </li>
+			              {.end}
+			            {.end}
+			
+			          </ul>
+			        </li> <!-- This ends the li .dropdown-toggle -->
+			      {.or}
+			
+			        <!--COLLECTION-->
+			
+			        {.section collection}
+			          <a href="{fullUrl}">{navigationTitle}</a>
+			        {.end}
+			
+			        <!--EXTERNAL LINK-->
+			
+			        {.section externalLink}
+			          <a href="{url}"{.section newWindow} target="_blank"{.end}>
+			            {title}
+			          </a>
+			        {.end}
+			
+			      {.end}
+			
+			    </li> <!-- This ends li class session active -->
+			    
+			{.end}
+			</ul> <!-- End ul .nav -->
+		
+		
+		<!--SITE TITLE OR LOGO-->
+		
+		  {.section website}
+		
+		    <h1 data-content-field="site-title">
+		      <a href="/">
+		        {.section logoImageUrl}
+		         <img src="{logoImageUrl}?format=original" alt="{siteTitle}" />
+		        {.or}
+		          {siteTitle}
+		        {.end}
+		      </a>
+		    </h1>
+		    
+		    <!--SITE TAGLINE-->
+		
+		    {.section siteTagLine}<p>{@}</p>{.end}
+		
+		  {.end}
+
+	</div><!-- End masthead-->
+</nav> <!-- End mainNav -->
+

@@ -19,15 +19,17 @@
   </head>
 
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
-  		
+	    <div class="container-narrow"><!-- FIRST CONTAINER -->	
 	    	<!--HEADER-->
 			<header id="header">
-				
-			  <!--MAIN NAVIGATION-->
+
+					<!--MAIN NAVIGATION-->
 			
-			  <squarespace:navigation navigationId="mainNav" template="navigation-1" />
-						  
+					<squarespace:navigation navigationId="mainNav" template="navigation-2" />
+	  
 			</header>
+			
+			<hr>
 			
 			<div class="container">
 			
