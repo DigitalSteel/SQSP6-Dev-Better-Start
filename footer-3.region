@@ -1,5 +1,5 @@
 
-			
+			<hr>
 			    <!--FOOTER WITH OPEN BLOCK FIELD-->
 			
 			    <footer id="footer">
@@ -11,6 +11,6 @@
 			    {squarespace-footers}
 			    
 		    </div><!-- End 2nd container-->
-		    </div><!-- End 1st container-->
+		 </div><!-- End 1st container-->
   	</body>
 </html> 
