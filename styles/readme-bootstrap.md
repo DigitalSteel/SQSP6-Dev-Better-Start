@@ -13,19 +13,11 @@ Uncheck the following features:
 	
 		Labels and badges
 		Tables
-<<<<<<< HEAD
 		Forms
-	
-	// Responsive
 
-		Narrow tablets and below (<767px)
-		Tablets to desktops (767-979px)
-		Large desktops (>1200px)
 		
-*To utilize the glyphicons, you must change the path to them in bootstrap-custom.css.
+To utilize the glyphicons, you must change the path to them in bootstrap-custom.css. Search for "glyph" in bootstrap.css and bootstrap.min.css and change the filepath to:
 
-LINE 785. background-image: url("assets/img/glyphicons-halflings.png");
-LINE 808. background-image: url("assets/img/glyphicons-halflings-white.png");
-=======
-		Forms
->>>>>>> Removed features
+LINE 813.  background-image: url("assets/img/glyphicons-halflings.png");
+LINE 836.  background-image: url("assets/img/glyphicons-halflings-white.png");
+
