@@ -1,0 +1,80 @@
+<nav id="mainNav" data-content-field="navigation-mainNav">
+	<div class="navbar">
+	  <div class="navbar-inner">
+	    <div class="container">
+	      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </a>
+	      <div class="brand-wrapper hidden-desktop">
+	      <a class="brand" href="/">MENU</a>
+	      </div>
+	      <div class="nav-collapse">	      
+							<ul class="nav">
+							{.repeated section items}
+							
+							    <li class="{.section active} active{.end}{.if folderActive} active{.end}">
+							
+							      {.folder?}
+							
+							        <!--FOLDER-->
+							        <li class="{.section active} active{.end}{.if folderActive} active{.end} dropdown">
+							          <a class="dropdown-toggle" data-toggle="dropdown" href="{collection.fullUrl}">{collection.navigationTitle} <b class="caret"></b></a>
+							
+							          <ul class="dropdown-menu">
+							
+							            {.repeated section items}
+							
+							              <!--COLLECTION IN A FOLDER-->
+							
+							              {.collection?}
+							                <li class="{.section active} active{.end}">
+							                  <a href="{collection.fullUrl}">
+							                    {collection.navigationTitle}
+							                  </a>
+							                </li>
+							              {.end}
+							
+							              <!--EXTERNAL LINK IN A FOLDER-->
+							
+							              {.section externalLink}
+							                <li>
+							                  <a href="{url}"{.section newWindow} target="_blank"{.end}>
+							                    {title}
+							                  </a>
+							                </li>
+							              {.end}
+							            {.end}
+							
+							          </ul>
+							        </li> <!-- This ends the li .dropdown-toggle -->
+							      {.or}
+							
+							        <!--COLLECTION-->
+							
+							        {.section collection}
+							          <a href="{fullUrl}">{navigationTitle}</a>
+							        {.end}
+							
+							        <!--EXTERNAL LINK-->
+							
+							        {.section externalLink}
+							          <a href="{url}"{.section newWindow} target="_blank"{.end}>
+							            {title}
+							          </a>
+							        {.end}
+							
+							      {.end}
+							
+							    </li> <!-- This ends li class session active -->
+							    
+							{.end}
+							</ul> <!-- End ul .nav -->
+							
+							
+	      </div><!-- /.nav-collapse -->
+	    </div> <!--/.container -->
+	  </div><!-- /.navbar-inner -->
+	</div><!-- /.navbar .navbar-fixed-top-->
+</nav> <!-- End mainNav -->

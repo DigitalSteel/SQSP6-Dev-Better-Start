@@ -8,12 +8,12 @@ Uncheck the following features:
 		
 		Normalize and reset
 		Grid system
-		Layouts
 			
 	// Base CSS
 	
 		Labels and badges
 		Tables
+<<<<<<< HEAD
 		Forms
 	
 	// Responsive
@@ -26,3 +26,6 @@ Uncheck the following features:
 
 LINE 785. background-image: url("assets/img/glyphicons-halflings.png");
 LINE 808. background-image: url("assets/img/glyphicons-halflings-white.png");
+=======
+		Forms
+>>>>>>> Removed features

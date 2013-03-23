@@ -1,0 +1,87 @@
+
+/* MOBILE FIRST
+-------------------------------------------------*/
+
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+
+/* UTILITY
+-----------------------------------------------*/
+
+
+
+/* HOMEPAGE
+-----------------------------------------------*/
+
+.homepage { }
+
+
+/* BLOG COLLECTION
+-----------------------------------------------*/
+
+.collection-type-blog {
+
+  /* BOTH PAGES 
+  ---------------------------------------------*/
+
+  /* LIST PAGE
+  ---------------------------------------------*/
+
+  &.view-list {
+	  #catg-tags a.category {
+		color: #eee;			  
+	  }
+	  
+	  #catg-tags a.tag {
+		color: #333;			  
+	  }
+  }
+
+  /* ITEM PAGE
+  ---------------------------------------------*/  
+
+  &.view-item {
+	   #catg-tags a.category {
+		color: #eee;			  
+	  }
+	  
+	  #catg-tags a.tag {
+		color: #333;			  
+	  }
+  }
+  
+}
+
+
+/* TOUCH DEVICE - ADDED BY MODERNIZR
+-----------------------------------------------*/
+
+html.touch {
+  .squarespace-comments .comments-content .comment-list .comment .comment-header .controls .squarespace-comment-buttons .comment-control {
+    opacity: 1;
+  }
+}
+
+
+/* BREAK GRID AND STACK BLOCKS ON SMALL SCREENS 
+-----------------------------------------------*/
+@media screen and (max-width: 979px) {
+
+body {
+	padding-top: 0;
+  }
+  
+}
+
+
+@media screen and (max-width: 980px) {
+
+  .row .col {
+    width: 100%;
+    float: none;
+  }
+  
+}

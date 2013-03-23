@@ -1,9 +1,0 @@
-
-	<!--CONTENT INJECTION POINT-->
-	<section id="content">    
-		{squarespace.main-content}
-	</section>
-	
-	<aside>
-		<squarespace:block-field id="sidebar-one" columns="1" />
-	</aside>
