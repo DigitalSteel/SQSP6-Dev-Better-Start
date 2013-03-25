@@ -24,7 +24,7 @@
     {postItemInjectCode}    
 
     <!--CATEGORIES-->
-    <div id="catg-tags">
+    <div class="catg-tags">
 		{.repeated section categories}
 			<span class="btn btn-info btn-mini">
 			<a class="category" href="?category={@|url-encode}">{@}</a>
